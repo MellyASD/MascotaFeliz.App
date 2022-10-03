@@ -1,0 +1,74 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaDuenosModel
+@{
+}
+<head>
+<style>
+
+
+h1 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+#table
+{
+    width: 100%
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+}
+th
+{
+
+}
+tr
+{
+width: 80%
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  border-style: hidden;
+  background-color: rgba(244, 164, 96, 0.3);
+}
+tr:hover 
+{
+    background-color: rgba(255, 99, 71, 0.3);
+}
+.btn-primary
+{
+
+}
+</style>
+</head>
+
+<h1>Listado de Propietarios</h1>
+<table id="table">
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+    </tr>
+    @foreach (var dueno in Model.listaDuenos)
+    {
+        <tr>
+            <td>@dueno.Nombres</td>
+            <td>@dueno.Apellidos</td>
+        
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./DetallesDuenos" asp-route-duenoId="@dueno.Id">
+                    Detalle Dueno
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./EditarDuenos" asp-route-duenoId="@dueno.Id">
+                    Editar Dueno
+                </a>
+            </td>
+
+        </tr>
+    }
+</table>
+<a class = "btn btn-primary table-btn" asp-page="./EditarDuenos" class="btn-default">Adicionar Dueño</a>

@@ -1,0 +1,86 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #1730a0;
+}
+
+.btn-primary {
+  color: rgb(0, 0, 0);
+  background-color: #f3d581;
+  border-color: #f1c675;
+  font-style: normal;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+ 
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: rgb(0, 0, 0);
+  background-color: #ebb030;
+  border-color: #ebb030;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+
+  font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+@media (min-width: 568px) {
+  html {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #f3d581;
+}
+.border-bottom {
+  border-bottom: 1px solid #f3d581;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(https://st4.depositphotos.com/3340325/24741/v/450/depositphotos_247413326-stock-illustration-paw-prints-bones-light-yellow.jpg);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 50px; /* Vertically center the text there */
+  background-color: #f1c675;
+  background-attachment: fixed;
+  
+}

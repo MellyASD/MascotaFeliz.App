@@ -1,0 +1,118 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditarMascotasModel
+@{
+    
+}
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h2 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(244, 164, 96, 0.3) ;
+    border-radius: 4.2px;
+    box-shadow: 0px 3px 10px -2px rgb(0 0 0 / 20%);
+    padding: 20px 20px 20px 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input [type="text"] , select
+{
+
+    width: 12%;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color:  #f9f9f9;
+}
+input[type="text"]
+{
+width: 20%;
+background-color: beige;
+height: 35px;
+border-radius: 2px;
+padding: 1em;
+line-height: 1.4;
+background-color: #f9f9f9;
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+-webkit-transition: 0.35s ease-in-out;
+-moz-transition: 0.35s ease-in-out;
+-o-transition: 0.35s ease-in-out;
+transition: 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+cursor: pointer;
+margin: 5px;
+}
+input [type=Grabar]
+{
+ background-color: #f1c675;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+label
+{
+
+}
+
+</style>
+</head>
+
+<h2>Agregar o editar Mascotas</h2>
+
+<form method="post" >
+    <div class="form-group">
+        <input type="hidden" asp-for = "mascota.Id" />
+        
+        <label asp-for="mascota.Nombre"></label>
+        <input asp-for="mascota.Nombre" class="form-control">
+        <label asp-for="mascota.Color"></label>
+        <input asp-for="mascota.Color" class="form-control">
+        <label asp-for="mascota.Raza"></label>
+        <input asp-for="mascota.Raza" class="form-control">
+        <label asp-for="mascota.Especie"></label>
+        <input asp-for="mascota.Especie" class="form-control">
+        
+        <label for="dueno">Dueño</label>
+        <select id="dueno" asp-for="mascota.Dueno.Id" name = "duenoId">
+            <option value="0">Seleccione un Dueño</option>
+            @foreach (var dueno in Model.listaDuenos)
+            {
+                <option value="@dueno.Id"> @dueno.Nombres @dueno.Apellidos</option><br><br>
+            }
+        </select>
+
+        <label for="veterinario">Veterinario</label>
+        <select id="veterinario" asp-for="mascota.Veterinario.Id" name = "veterinarioId">
+            <option value="0">Seleccione un Veterinario</option>
+            @foreach (var veterinario in Model.listaVeterinarios)
+            {
+                <option value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos</option>
+            }
+        </select>
+
+        <button type="submit" class="btn btn-primary">Grabar</button>
+    </div>
+</form>
+
+<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas </a>

@@ -1,0 +1,74 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaVeterinariosModel
+@{
+}
+<head>
+<style>
+
+
+h1 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+#table
+{
+    width: 80%
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+}
+th
+{
+
+}
+tr
+{
+width: 80%
+}
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  border-style: hidden;
+  background-color: rgba(244, 164, 96, 0.3);
+}
+tr:hover 
+{
+    background-color: rgba(255, 99, 71, 0.3);
+}
+.btn-primary
+{
+
+}
+</style>
+</head>
+<h1>Listado de Veterinarios</h1>
+<table class="table">
+     <tr>
+        
+        <th>Nombres</th>
+        <th>Apellidos</th>
+    </tr>
+    @foreach (var veterinario in Model.listaVeterinarios)
+    {
+        <tr>
+            
+            <td>@veterinario.Nombres</td>
+            <td>@veterinario.Apellidos</td>
+            
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./DetallesVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                    Detalle Veterinario
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./EditarVeterinarios" asp-route-veterinarioId="@veterinario.Id">
+                    Editar Veterinario
+                </a>
+            </td>
+        </tr>
+    }
+</table>
+<a class = "btn btn-primary table-btn" asp-page="./EditarVeterinarios" class="btn-default">Adicionar Veterinario</a>

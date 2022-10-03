@@ -1,0 +1,85 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesMascotasModel
+@{
+}
+<head>
+<style>
+
+
+h1 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+.div-1 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-2 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-3 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-4 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-5 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-6 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+
+    
+
+.btn-default
+{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+</style>
+</head>
+<h1>Detalles de la Mascota</h1>
+
+<div class="div-6">
+    Id: @Model.mascota.Id
+</div>
+
+<div class="div-1">
+    Nombre: @Model.mascota.Nombre
+</div>
+<div class="div-2">
+    Color: @Model.mascota.Color
+</div>
+<div class="div-3">
+    Raza: @Model.mascota.Raza
+</div>
+<div class="div-4">
+    Especie: @Model.mascota.Especie
+</div>
+
+<div class="div-5">
+    Nombre del dueño: @Model.mascota.Dueno.Nombres
+</div>
+<div class="div-5">
+    Nombre del veterinario: @Model.mascota.Veterinario.Nombres
+</div>
+
+
+<a asp-page="./ListaMascotas" class="btn-default">Lista de Mascotas </a>

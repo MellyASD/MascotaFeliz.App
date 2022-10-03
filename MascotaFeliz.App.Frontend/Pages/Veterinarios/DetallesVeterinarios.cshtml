@@ -1,0 +1,79 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetallesVeterinariosModel
+@{
+}
+<head>
+<style>
+
+
+h1 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+.div-1 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-2 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-3 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-4 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-5 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+.div-6 {
+    background-color: rgba(244, 164, 96, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 30%;
+}
+
+    
+
+.btn-default
+{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+</style>
+</head>
+<h1>Detalles del Veterinario</h1>
+
+<div class="div-1">
+    Id: @Model.veterinario.Id
+</div>
+
+<div class="div-2">
+    Nombre: @Model.veterinario.Nombres
+</div>
+<div class="div-3">
+    Apellido: @Model.veterinario.Apellidos
+</div>
+<div class="div-4">
+    Direccion: @Model.veterinario.Direccion
+</div>
+<div class="div-5">
+    Telefono: @Model.veterinario.Telefono
+</div>
+<div class="div-6">
+    Correo: @Model.veterinario.TarjetaProfesional
+</div>
+<a asp-page="./Listaveterinarios" class="btn-default">Lista de Veterinarios </a>

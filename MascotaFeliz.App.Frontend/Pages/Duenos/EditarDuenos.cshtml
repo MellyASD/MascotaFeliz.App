@@ -1,0 +1,100 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditarDuenosModel
+@{
+    
+}
+<head>
+<style>
+body {
+  background-color: linen;
+}
+
+h2 {
+  color: brown;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: bold italic;
+  margin-left: 40px;
+  text-shadow: 7px 4px 5px white;
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(244, 164, 96, 0.3) ;
+    border-radius: 4.2px;
+    box-shadow: 0px 3px 10px -2px rgb(0 0 0 / 20%);
+    padding: 20px 20px 20px 20px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input [type="text"] , select
+{
+
+    width: 12%;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color:  #f9f9f9;
+}
+input[type="text"]
+{
+width: 20%;
+background-color: beige;
+height: 35px;
+border-radius: 2px;
+padding: 1em;
+line-height: 1.4;
+background-color: #f9f9f9;
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+-webkit-transition: 0.35s ease-in-out;
+-moz-transition: 0.35s ease-in-out;
+-o-transition: 0.35s ease-in-out;
+transition: 0.35s ease-in-out;
+transition: all 0.35s ease-in-out;
+cursor: pointer;
+margin: 5px;
+}
+input [type=Grabar]
+{
+ background-color: #f1c675;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+label
+{
+
+}
+
+</style>
+</head>
+<h2>Agregar o editar Dueños</h2>
+
+<form method="post" >
+    <div class="form-group">
+        <input type="hidden" asp-for = "dueno.Id" />
+        <label asp-for="dueno.Nombres"></label>
+        <input asp-for="dueno.Nombres" class="form-control">
+        <label asp-for="dueno.Apellidos"></label>
+        <input asp-for="dueno.Apellidos" class="form-control">
+        <label asp-for="dueno.Direccion"></label>
+        <input asp-for="dueno.Direccion" class="form-control">
+        <label asp-for="dueno.Telefono"></label>
+        <input asp-for="dueno.Telefono" class="form-control">
+        <label asp-for="dueno.Correo"></label>
+        <input asp-for="dueno.Correo" class="form-control">
+
+        <button type="submit" class="btn btn-primary">Grabar</button>
+    </div>
+</form>
+
+<a asp-page="./ListaDuenos" class="btn-default">Lista de Dueños </a>

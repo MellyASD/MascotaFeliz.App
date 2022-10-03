@@ -1,0 +1,169 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Reem Kufi Fun', sans-serif;
+    background-color: white;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    padding-top: 5px;
+    justify-items: center;
+    align-items: center;
+    background-color: #0F3460;
+}
+
+.logo-container img{
+    width: 140px;
+}
+
+.nav-container ul{
+    display: flex;
+    list-style-type: none;
+    font-weight: 500;
+}
+
+.nav-container a {
+    text-decoration: none;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.right-img img{
+    width: 70px;
+    color: #533483;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    height: fit-content;
+}
+
+.information-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.information-container button {
+    width: 50%;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 15px;
+    align-self: center;
+    color: whitesmoke;
+    background-color: #0F3460;
+    border-radius: 4.2px;
+}
+
+h2 {
+    color: #0F3460;
+}
+
+section img {
+    width: 300px;
+    height: auto;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    height: auto;
+}
+
+.health-icon, .veterinarian-icon, .badge-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 40px;
+}
+
+.text {
+    width: 100%;
+    margin-top: 10px;
+}
+
+footer {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    color: whitesmoke;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: #0F3460;
+}
+
+
+/* header {
+    width: 100%;
+    color: black;
+}
+
+.container-title {
+    height: 150px;
+    /* background-color: white; */
+    /* color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    margin: 20px;
+}
+
+.container-title img {
+    width: 100px;
+}
+
+.container-nav {
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-nav li {
+    display: inline-block;
+}
+
+li a:hover {
+    color: #16213E;
+    box-shadow: inset 200px 0 0 0 #54b3d6;
+}
+
+.container-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    border-color: black;
+    margin: 10px;
+} */ 
+
